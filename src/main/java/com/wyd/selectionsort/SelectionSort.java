@@ -1,4 +1,4 @@
-package com.wyd;
+package com.wyd.selectionsort;
 
 public class SelectionSort {
     private SelectionSort(){}
