@@ -21,6 +21,17 @@ public class InsertionSort {
         arr[minIndex] = t;
     }
 
+    public static <E extends Comparable<E>> void sort2(E[] arr) {
+        for (int i = 0; i < arr.length; i ++) {
+            E t = arr[i];
+            int j;
+            for (j = i; j - 1 >= 0 && t.compareTo(arr[j - 1]) < 0; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[j] = t;
+        }
+    }
+
     public static void main(String[] args) {
         Integer[] arr = {1,4,2,3,6,5};
         InsertionSort.sort(arr);
